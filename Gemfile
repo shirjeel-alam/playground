@@ -18,6 +18,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'bootstrap-sass'
 
+gem 'aws-sdk-v1'
 # Image/File Upload
 gem 'paperclip'
 gem 'paperclip-dropbox'
