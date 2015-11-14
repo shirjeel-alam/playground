@@ -18,6 +18,9 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'bootstrap-sass'
 
+# Image/File Upload
+gem 'paperclip'
+
 group :development do
   gem 'rails_layout'
   gem 'quiet_assets'
