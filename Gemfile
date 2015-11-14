@@ -20,6 +20,7 @@ gem 'bootstrap-sass'
 
 # Image/File Upload
 gem 'paperclip'
+gem 'paperclip-dropbox'
 
 group :development do
   gem 'rails_layout'

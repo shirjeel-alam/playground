@@ -14,10 +14,14 @@
 
 class Photo < ActiveRecord::Base
   has_attached_file :image,
-  path: ':rails_root/public/system/uploads/:attachment/:id/:style/:filename',
-  url: '/system/uploads/:attachment/:id/:style/:filename', 
   styles: { thumb: ["64x64#", :jpg], original: ['500x500>', :jpg] },
-  convert_options: { thumb: "-quality 75 -strip", original: "-quality 85 -strip" }
+  convert_options: { thumb: "-quality 75 -strip", original: "-quality 85 -strip" },
+  # path: ':rails_root/public/system/uploads/:attachment/:id/:style/:filename',
+  # url: '/system/uploads/:attachment/:id/:style/:filename'
+  storage: :dropbox,
+  dropbox_credentials: Rails.root.join('config', 'dropbox.yml'),
+  dropbox_visibility: 'private',
+  path: 'App/ShirjeelPlayground/:id/:style/:filename'
 
   validates_attachment :image, content_type: { content_type: ["image/jpeg", "image/gif", "image/png"] }
 end
