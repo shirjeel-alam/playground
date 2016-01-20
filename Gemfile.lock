@@ -37,8 +37,8 @@ GEM
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
     addressable (2.4.0)
-    annotate (2.7.0)
-      activerecord (>= 3.2, < 6.0)
+    annotate (2.6.10)
+      activerecord (>= 3.2, <= 4.3)
       rake (~> 10.4)
     arel (6.0.3)
     autoprefixer-rails (6.3.1)
@@ -83,6 +83,7 @@ GEM
       railties (>= 4.2.0)
       thor (>= 0.14, < 2.0)
     json (1.8.3)
+    kramdown (1.9.0)
     launchy (2.4.3)
       addressable (~> 2.3)
     letter_opener (1.4.1)
@@ -183,13 +184,14 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  annotate
+  annotate (= 2.6.10)
   aws-sdk-v1
   better_errors
   bootstrap-sass
   coffee-rails (~> 4.1.0)
   jbuilder (~> 2.0)
   jquery-rails
+  kramdown
   letter_opener
   paperclip
   paperclip-dropbox

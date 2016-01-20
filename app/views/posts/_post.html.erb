@@ -1,0 +1,4 @@
+<div class='well'>
+  <h1><%= post.title %></h1>
+  <%= Kramdown::Document.new(post.content).to_html.html_safe %>
+</div>

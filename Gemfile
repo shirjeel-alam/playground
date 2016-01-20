@@ -23,6 +23,9 @@ gem 'aws-sdk-v1'
 gem 'paperclip'
 gem 'paperclip-dropbox'
 
+# Markdown parser
+gem 'kramdown'
+
 group :development do
   gem 'rails_layout'
   gem 'quiet_assets'
@@ -32,7 +35,7 @@ end
 group :development, :test do
   gem 'puma'
   gem 'spring'
-  gem 'annotate'
+  gem 'annotate', '2.6.10'
   gem 'pry-rails'
   gem 'letter_opener'
 end

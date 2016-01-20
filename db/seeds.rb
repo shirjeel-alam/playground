@@ -5,3 +5,8 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+json = ActiveSupport::JSON.decode(File.read('db/seeds/posts.json'))
+json.each do |post|
+  Post.create!(title: post['title'], content: post['body'])
+end

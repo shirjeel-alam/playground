@@ -1,0 +1,7 @@
+<div class='well'>
+  <h1><%= @post.title %></h1>
+  <%= Kramdown::Document.new(@post.content).to_html.html_safe %>
+</div>
+
+<%= link_to 'Edit', edit_post_path(@post) %> |
+<%= link_to 'Back', posts_path %>
