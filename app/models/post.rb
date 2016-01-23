@@ -10,4 +10,7 @@
 #
 
 class Post < ActiveRecord::Base
+  def converted_content
+    Katex.renderMathInElement(content)
+  end
 end

@@ -26,6 +26,9 @@ gem 'paperclip-dropbox'
 # Markdown parser
 gem 'kramdown'
 
+# Run JS fron Ruby
+gem 'execjs'
+
 group :development do
   gem 'rails_layout'
   gem 'quiet_assets'
