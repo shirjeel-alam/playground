@@ -1,0 +1,6 @@
+<div class='row'>
+  <h3>Email: <%= document.email %></h3>
+  <%= link_to 'Show Document', document_path(document), target: '_blank', class: 'btn btn-primary' %>
+  <%= link_to 'View Document', document.url, target: '_blank', class: 'btn btn-info' %>
+  <%= link_to 'Remove', document_path(document), class: 'btn btn-danger', method: :delete, data: {confirm: 'Are you sure?'} %>
+</div>

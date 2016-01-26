@@ -29,6 +29,10 @@ gem 'kramdown'
 # Run JS fron Ruby
 gem 'execjs'
 
+# Watermark pdf
+gem 'prawn'
+gem 'combine_pdf'
+
 group :development do
   gem 'rails_layout'
   gem 'quiet_assets'
