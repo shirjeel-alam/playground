@@ -33,14 +33,21 @@ class Document < ActiveRecord::Base
     tmp_doc = 'tmp/watermark.pdf'
     
     Prawn::Document.generate(tmp_doc) do |pdf|
-      pdf.repeat :all do
-        pdf.fill_color 'D3D3D3'
-        pdf.text_box email, align: :center, valign: :center, size: 24, rotate: 45, at: [100, 450]
-      end
+      # Center Rotated
+      # pdf.repeat :all do
+      #   pdf.fill_color 'D3D3D3'
+      #   pdf.text_box email, align: :center, valign: :center, size: 24, rotate: 45, at: [100, 450]
+      # end
+
+      # Bottom Right Corner
+      # pdf.repeat :all do
+      #   pdf.fill_color 'D3D3D3'
+      #   pdf.text_box email, align: :right, valign: :bottom, size: 16
+      # end
       
-      (doc.pages.count - 1).times do 
-        pdf.start_new_page
-      end
+      # (doc.pages.count - 1).times do 
+      #   pdf.start_new_page
+      # end
     end
 
     CombinePDF.load(tmp_doc)
