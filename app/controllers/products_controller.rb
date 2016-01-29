@@ -7,11 +7,12 @@ class ProductsController < ApplicationController
     begin
       product = Product.find(stripe_params[:product_id])
       charge = process_payment(product, stripe_params[:stripeEmail], stripe_params[:stripeToken])
-      flash[:danger] = 'Charge successful'
-    rescue Stripe::CardError
-      flash[:danger] = 'Charge unsuccessful'
+      flash[:success] = 'Charge successful'
+    rescue Stripe::CardError => e
+      flash[:danger] = e.message
+    ensure 
+      redirect_to products_path
     end
-    redirect_to products_path
   end
 
   private
