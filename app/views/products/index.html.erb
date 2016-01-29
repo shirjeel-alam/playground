@@ -1,0 +1,36 @@
+<div class="container">
+  </br>
+  <div id="products" class="row list-group">
+    <%= form_tag charge_products_path , id: 'stripe-payment-form' do %>
+      <%= hidden_field_tag :product_id %>
+    <% end %>
+    <%= render @products %>
+  </div>
+</div>
+
+<%= javascript_tag do %>
+  var handler = StripeCheckout.configure({
+    key: "<%= Rails.application.secrets.stripe_publishable_key %>",
+    image: "https://placehold.it/100",
+    token: function(token, args) {
+      var form = $('#stripe-payment-form');
+      form.append($('<input type="hidden" name="stripeToken" />').val(token.id));
+      form.append($('<input type="hidden" name="stripeEmail" />').val(token.email));
+      form.submit();
+    }
+  });
+
+  <% @products.each do |product| %>
+      document.getElementById('<%= dom_id(product, 'btn') %>').addEventListener('click', function(e) {
+        e.preventDefault();
+        var form = $('#stripe-payment-form');
+        $('#product_id').val("<%= product.id %>");
+        handler.open({
+          name: 'Playground',
+          currency: 'usd',
+          description: '<%= product.title %>',
+          amount: '<%= product.stripe_price %>'
+        });
+      });
+    <% end %>
+<% end %>

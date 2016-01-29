@@ -1,0 +1,10 @@
+<script
+  src='https://checkout.stripe.com/checkout.js'
+  class='stripe-button'
+  data-key=<%= Rails.application.secrets.stripe_publishable_key %>
+  data-image='https://placehold.it/100'
+  data-name='Playground'
+  data-description=<%= product.title %>
+  data-amount=<%= product.price * 100 %>
+  data-label='Buy'
+></script>

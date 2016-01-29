@@ -34,6 +34,8 @@ gem 'execjs'
 gem 'prawn'
 gem 'combine_pdf'
 
+gem 'stripe'
+
 group :development do
   gem 'rails_layout'
   gem 'quiet_assets'
