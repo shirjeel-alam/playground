@@ -78,6 +78,7 @@ GEM
       responders
       thread_safe (~> 0.1)
       warden (~> 1.2.3)
+    devise-bootstrap-views (0.0.7)
     domain_name (0.5.25)
       unf (>= 0.0.5, < 1.0.0)
     dropbox-sdk (1.6.5)
@@ -227,6 +228,7 @@ DEPENDENCIES
   coffee-rails (~> 4.1.0)
   combine_pdf
   devise
+  devise-bootstrap-views
   execjs
   jbuilder (~> 2.0)
   jquery-rails

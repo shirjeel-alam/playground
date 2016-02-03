@@ -32,6 +32,7 @@ gem 'combine_pdf'
 # Stripe checkout
 gem 'stripe'
 gem 'devise'
+gem 'devise-bootstrap-views'
 
 group :development do
   gem 'rails_layout'
