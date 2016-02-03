@@ -23,7 +23,11 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable, :recoverable, :rememberable, :trackable, :validatable
 
   def password_required?
-    super if persisted?
+    if !persisted?
+      false
+    else
+      !password.nil? || !password_confirmation.nil?
+    end
   end
 
   def has_no_password?
