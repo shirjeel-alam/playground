@@ -18,22 +18,22 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'bootstrap-sass'
 
-gem 'aws-sdk-v1'
-
 # Image/File Upload
 gem 'paperclip'
 gem 'paperclip-dropbox'
+gem 'aws-sdk-v1'
 
 # Markdown parser
 gem 'kramdown'
 
-# Run JS fron Ruby
+# Run JS from Ruby
 gem 'execjs'
 
 # Watermark pdf
 gem 'prawn'
 gem 'combine_pdf'
 
+# Stripe checkout
 gem 'stripe'
 
 group :development do

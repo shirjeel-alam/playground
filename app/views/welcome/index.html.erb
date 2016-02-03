@@ -1,10 +1,21 @@
 <div class='container'>
   <div class='row'>
     <center><h1>Welcome To Shirjeel's Playground</h1></center>
-    <div class='col-md-4'>Column 1</div>
-    <div class='col-md-4'>Column 2</div>
-    <div class='col-md-4'>Column 3</div>
   </div>
-  <!-- <center><iframe src='http://www.pdf995.com/samples/pdf.pdf' style='width:720px;height:1280px'></iframe></center> -->
-  <center><object data='http://www.pdf995.com/samples/pdf.pdf' type="application/pdf" width="1280" height="720">alt : <a href='http://www.pdf995.com/samples/pdf.pdf'>test.pdf</a></object></center>
+  <div class='row well'>
+    <h3><%= link_to('Documents', documents_path) %></h3>
+    <p>Test generation of PDF and watermarking it. Uses <%= link_to('Prawn', 'https://github.com/prawnpdf/prawn') %> and <%= link_to('CombinePDF', 'https://github.com/boazsegev/combine_pdf') %>.<p>
+  </div>
+  <div class='row well'>
+    <h3><%= link_to('Photos', photos_path) %></h3>
+    <p>Test paperclip and integration with different storage systems like local, dropbox, s3. Uses <%= link_to('Paperclip', 'https://github.com/thoughtbot/paperclip') %>, <%= link_to('Paperclip-Dropbox', 'https://github.com/janko-m/paperclip-dropbox') %> and <%= link_to('AWS-SDK', 'https://github.com/aws/aws-sdk-ruby') %>.<p>
+  </div>
+  <div class='row well'>
+    <h3><%= link_to('Posts', posts_path) %></h3>
+    <p>Test inline TeX math rendering. Uses <%= link_to('KaTeX', 'https://github.com/Khan/KaTeX') %> and <%= link_to('ExecJS', 'https://github.com/rails/execjs') %>.<p>
+  </div>
+  <div class='row well'>
+    <h3><%= link_to('Products', products_path) %></h3>
+    <p>Test stripe checkout and have multiple buttons on same page. Uses <%= link_to('Stripe', 'https://github.com/stripe/stripe-ruby') %>.<p>
+  </div>
 </div>
