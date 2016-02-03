@@ -22,19 +22,16 @@ gem 'bootstrap-sass'
 gem 'paperclip'
 gem 'paperclip-dropbox'
 gem 'aws-sdk-v1'
-
 # Markdown parser
 gem 'kramdown'
-
 # Run JS from Ruby
 gem 'execjs'
-
 # Watermark pdf
 gem 'prawn'
 gem 'combine_pdf'
-
 # Stripe checkout
 gem 'stripe'
+gem 'devise'
 
 group :development do
   gem 'rails_layout'
